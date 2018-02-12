@@ -25,6 +25,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrderMethod", "OrderMethod\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "csharpFundamentals", "csharpFundamentals\csharpFundamentals.csproj", "{40CDFD62-2C7C-47E1-91E3-6F5D199B7E66}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CsharpRedux", "CsharpRedux\CsharpRedux.csproj", "{A1F40ED3-C386-428B-8B01-3792E8DE34EE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -75,6 +77,10 @@ Global
 		{40CDFD62-2C7C-47E1-91E3-6F5D199B7E66}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{40CDFD62-2C7C-47E1-91E3-6F5D199B7E66}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{40CDFD62-2C7C-47E1-91E3-6F5D199B7E66}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A1F40ED3-C386-428B-8B01-3792E8DE34EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A1F40ED3-C386-428B-8B01-3792E8DE34EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A1F40ED3-C386-428B-8B01-3792E8DE34EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A1F40ED3-C386-428B-8B01-3792E8DE34EE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
