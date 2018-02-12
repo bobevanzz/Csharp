@@ -1,0 +1,7 @@
+C:\repos\C#\OrderMethod\bin\Debug\OrderMethod.exe.config
+C:\repos\C#\OrderMethod\bin\Debug\OrderMethod.exe
+C:\repos\C#\OrderMethod\bin\Debug\OrderMethod.pdb
+C:\repos\C#\OrderMethod\obj\Debug\OrderMethod.csprojResolveAssemblyReference.cache
+C:\repos\C#\OrderMethod\obj\Debug\OrderMethod.csproj.CoreCompileInputs.cache
+C:\repos\C#\OrderMethod\obj\Debug\OrderMethod.exe
+C:\repos\C#\OrderMethod\obj\Debug\OrderMethod.pdb

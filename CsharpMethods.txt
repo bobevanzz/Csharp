@@ -1,0 +1,7 @@
+METHODS return:
+	nothing
+	returns a single type (uses return=)
+	return using a REF (for structures)
+	return using an implied REF (for classes)
+	return using an out - never use, tuples replace out
+	return using tuples (C# 7 and later) 

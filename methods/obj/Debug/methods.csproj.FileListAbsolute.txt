@@ -1,0 +1,7 @@
+C:\repos\C#\methods\bin\Debug\methods.exe.config
+C:\repos\C#\methods\bin\Debug\methods.exe
+C:\repos\C#\methods\bin\Debug\methods.pdb
+C:\repos\C#\methods\obj\Debug\methods.csprojResolveAssemblyReference.cache
+C:\repos\C#\methods\obj\Debug\methods.csproj.CoreCompileInputs.cache
+C:\repos\C#\methods\obj\Debug\methods.exe
+C:\repos\C#\methods\obj\Debug\methods.pdb

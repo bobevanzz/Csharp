@@ -1,0 +1,21 @@
+C#
+Learn	if
+	while
+	class
+	do while
+	for
+	memorize the data types for SQL and C#
+	Collections
+all classes become dll's. when a .exe is initialised, it compiles all dll's into executables
+
+Namespace
+    Class
+	Properties
+	Methods
+	Constructor (Methods)
+	Field (property)
+		 
+RESEARCH:
+	Development patterns
+	patterns and BEST practices   
+
