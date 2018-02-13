@@ -6,6 +6,21 @@ using System.Threading.Tasks;
 
 namespace CsharpRedux
 {
+
+    class Employee: Person //colon and then the class type to inherit 
+    {
+        public int EmployeeID { get; set; }
+        public DateTime HireDate { get; set; }
+        public decimal Salary { get; set; }
+        public decimal HourlyRate { get; set; }
+        public bool Manager { get; set; }
+        public DateTime BirthDate { get; set; }
+        public string GetBirthDay()
+        {
+            //code goes here
+            return "01/01/2018";
+        }
+    }
     class Person { 
         public int PersonID{ get; set; } // prop tab tab for a shortcut
         public string FirstName { get; set; }

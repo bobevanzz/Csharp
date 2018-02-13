@@ -11,7 +11,8 @@ namespace CsharpRedux
         static void Main(string[] args)
         {
             //Person p1 = new Person();
-           
+            Employee e1 = new Employee();
+            e1.
             Console.ReadLine();
         }
     }
