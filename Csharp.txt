@@ -19,3 +19,7 @@ RESEARCH:
 	Development patterns
 	patterns and BEST practices   
 
+Interface
+   similar to a class except : No properties
+			       Methods, but no body
+			      

@@ -1,0 +1,6 @@
+C:\repos\Csharp\MyClassLibrary\bin\Debug\MyClassLibrary.dll
+C:\repos\Csharp\MyClassLibrary\bin\Debug\MyClassLibrary.pdb
+C:\repos\Csharp\MyClassLibrary\obj\Debug\MyClassLibrary.csprojResolveAssemblyReference.cache
+C:\repos\Csharp\MyClassLibrary\obj\Debug\MyClassLibrary.csproj.CoreCompileInputs.cache
+C:\repos\Csharp\MyClassLibrary\obj\Debug\MyClassLibrary.dll
+C:\repos\Csharp\MyClassLibrary\obj\Debug\MyClassLibrary.pdb
