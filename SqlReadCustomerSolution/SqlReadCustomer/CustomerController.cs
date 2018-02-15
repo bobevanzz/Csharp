@@ -9,6 +9,57 @@ namespace SqlReadCustomer
 {
     public class CustomerController
     {
+        public List<Customer> SearchByCreditLimitRange(int lower, int upper)
+        {
+            string connStr = @"server=DESKTOP-V1OGCBJ\SQLSERVER;database=SqlTutorial;Trusted_connection=true";
+            SqlConnection conn = new SqlConnection(connStr);
+            conn.Open();
+            if (conn.State != System.Data.ConnectionState.Open)
+            {
+                Console.WriteLine("The connection didn't open.");
+                return null;
+            }
+            string sql = "select * from customer"
+                +" where CreditLimit between @lowercl and @uppercl" 
+                +" order by CreditLimit desc";
+            SqlCommand cmd = new SqlCommand(sql, conn);
+            SqlParameter plower = new SqlParameter("@lowercl", lower);
+            SqlParameter pupper = new SqlParameter("@uppercl", upper);
+            cmd.Parameters.Add(plower);
+            cmd.Parameters.Add(pupper);
+
+            SqlDataReader reader = cmd.ExecuteReader();
+            if (!reader.HasRows)
+            {
+                Console.WriteLine("Result has no row.");
+                return null;
+            }
+            List<Customer> customers = new List<Customer>();
+            while (reader.Read())
+            {
+                int id = reader.GetInt32(reader.GetOrdinal("Id"));
+                string name = reader.GetString(reader.GetOrdinal("Name"));
+                string city = reader.GetString(reader.GetOrdinal("City"));
+                string state = reader.GetString(reader.GetOrdinal("State"));
+                bool isCorpAcct = reader.GetBoolean(reader.GetOrdinal("IsCorpAcct"));
+                int creditLimit = reader.GetInt32(reader.GetOrdinal("CreditLimit"));
+                bool active = reader.GetBoolean(reader.GetOrdinal("Active"));
+
+                Customer customer = new Customer();
+                customer.Id = id;
+                customer.Name = name;
+                customer.City = city;
+                customer.State = state;
+                customer.IsCorpAcct = isCorpAcct;
+                customer.CreditLimit = creditLimit;
+                customer.Active = active;
+                customers.Add(customer);
+            }
+
+            conn.Close();
+            return customers;
+        }
+
         public Customer Get(int CustomerId) {
             string connStr = @"server=DESKTOP-V1OGCBJ\SQLSERVER;database=SqlTutorial;Trusted_connection=true";
             SqlConnection conn = new SqlConnection(connStr);
@@ -70,26 +121,25 @@ namespace SqlReadCustomer
                     return null;
                 }
                 List<Customer> customers = new List<Customer>();
-                while (reader.Read())
-                {
-                    int id = reader.GetInt32(reader.GetOrdinal("Id"));
-                    string name = reader.GetString(reader.GetOrdinal("Name"));
-                    string city = reader.GetString(reader.GetOrdinal("City"));
-                    string state = reader.GetString(reader.GetOrdinal("State"));
-                    bool isCorpAcct = reader.GetBoolean(reader.GetOrdinal("IsCorpAcct"));
-                    int creditLimit = reader.GetInt32(reader.GetOrdinal("CreditLimit"));
-                    bool active = reader.GetBoolean(reader.GetOrdinal("Active"));
+            while (reader.Read())
+            {
+                int id = reader.GetInt32(reader.GetOrdinal("Id"));
+                string name = reader.GetString(reader.GetOrdinal("Name"));
+                string city = reader.GetString(reader.GetOrdinal("City"));
+                string state = reader.GetString(reader.GetOrdinal("State"));
+                bool isCorpAcct = reader.GetBoolean(reader.GetOrdinal("IsCorpAcct"));
+                int creditLimit = reader.GetInt32(reader.GetOrdinal("CreditLimit"));
+                bool active = reader.GetBoolean(reader.GetOrdinal("Active"));
 
-                    Customer customer = new Customer();
-                    customer.Id = id;
-                    customer.Name = name;
-                    customer.City = city;
-                    customer.State = state;
-                    customer.IsCorpAcct = isCorpAcct;
-                    customer.CreditLimit = creditLimit;
-                    customer.Active = active;
-
-                    customers.Add(customer);
+                Customer customer = new Customer();
+                customer.Id = id;
+                customer.Name = name;
+                customer.City = city;
+                customer.State = state;
+                customer.IsCorpAcct = isCorpAcct;
+                customer.CreditLimit = creditLimit;
+                customer.Active = active;
+                customers.Add(customer);
                 }
 
                 conn.Close();
