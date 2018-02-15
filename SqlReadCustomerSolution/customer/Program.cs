@@ -11,12 +11,14 @@ namespace TestSqlReadCustomer
     {
         static void Main(string[] args)
         {
-            SqlCustomer cust = new SqlCustomer();
-            List<Customer> customers = cust.List();
-            foreach (Customer customer in customers)
-            {
-                Console.WriteLine($"{customer.Id} | {customer.Name} | {customer.City} | {customer.State}");
-            }
+            CustomerController cust = new CustomerController();
+          //  List<Customer> customers = cust.List();
+          //  foreach (Customer customer in customers)
+           // {
+             //   Console.WriteLine($"{customer.Id} | {customer.Name} | {customer.City} | {customer.State}");
+           // }
+            Customer customer = cust.Get(2);
+            Console.WriteLine($"{customer.Id} | {customer.Name} | {customer.City} | {customer.State}");
             Console.ReadKey();
         }
     }
