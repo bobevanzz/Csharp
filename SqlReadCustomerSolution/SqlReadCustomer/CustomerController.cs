@@ -9,6 +9,59 @@ namespace SqlReadCustomer
 {
     public class CustomerController
     {
+        public bool Insert(Customer customer)
+        {
+            string connStr = @"server=DESKTOP-V1OGCBJ\SQLSERVER;database=SqlTutorial;Trusted_connection=true";
+            SqlConnection conn = new SqlConnection(connStr);
+            conn.Open();
+            if (conn.State != System.Data.ConnectionState.Open)
+            {
+                Console.WriteLine("The connection didn't open.");
+                return false;
+            }
+            string sql = "insert into from customer" 
+                + "(Name, City, State, IsCorpAcct, CreditLimit, Active)"
+                +" values (@Name, @City, @State, @IsCorpAcct, @CreditLimit, @Active)" ;
+            SqlCommand cmd = new SqlCommand(sql, conn);
+            //SqlParameter pId = new SqlParameter();
+            //pId.ParameterName = "@id";
+            //pId.Value = CustomerId;
+            //cmd.Parameters.Add(pId);
+            cmd.Parameters.Add(new SqlParameter("@Name",customer.Name));
+            cmd.Parameters.Add(new SqlParameter("@City", customer.City));
+            cmd.Parameters.Add(new SqlParameter("@State", customer.State));
+            cmd.Parameters.Add(new SqlParameter("@IsCorpAcct", customer.IsCorpAcct));
+            cmd.Parameters.Add(new SqlParameter("@CreditLimit", customer.CreditLimit));
+            cmd.Parameters.Add(new SqlParameter("@Active", customer.Active));
+            int recsAffected = cmd.ExecuteNonQuery();
+            conn.Close();
+            if (recsAffected !=1)
+            {
+                Console.WriteLine($"Insert failed. Who do we blame it on?");
+                return false;
+            }
+            return true;
+            //reader.Read();
+            //int id = reader.GetInt32(reader.GetOrdinal("Id"));
+            //string name = reader.GetString(reader.GetOrdinal("Name"));
+            //string city = reader.GetString(reader.GetOrdinal("City"));
+            //string state = reader.GetString(reader.GetOrdinal("State"));
+            //bool isCorpAcct = reader.GetBoolean(reader.GetOrdinal("IsCorpAcct"));
+            //int creditLimit = reader.GetInt32(reader.GetOrdinal("CreditLimit"));
+            //bool active = reader.GetBoolean(reader.GetOrdinal("Active"));
+
+            //Customer Customer = new Customer();
+            //Customer.Id = id;
+            //Customer.Name = name;
+            //Customer.City = city;
+            //Customer.State = state;
+            //Customer.IsCorpAcct = isCorpAcct;
+            //Customer.CreditLimit = creditLimit;
+            //Customer.Active = active;
+
+            //return Customer;
+        }
+        
         public List<Customer> SearchByCreditLimitRange(int lower, int upper)
         {
             string connStr = @"server=DESKTOP-V1OGCBJ\SQLSERVER;database=SqlTutorial;Trusted_connection=true";

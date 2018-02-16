@@ -15,5 +15,5 @@ namespace SqlReadCustomer
         public bool IsCorpAcct { get; set; }
         public int CreditLimit { get; set; }
         public bool Active { get; set; }
-    }
+   }
 }
