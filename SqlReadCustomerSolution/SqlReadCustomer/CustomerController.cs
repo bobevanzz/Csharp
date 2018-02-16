@@ -133,7 +133,7 @@ namespace SqlReadCustomer
             {
                 Console.WriteLine($"Customer {CustomerId} not found");
                 return null;
-            }
+            } // 
             reader.Read();
                 int id = reader.GetInt32(reader.GetOrdinal("Id"));
                 string name = reader.GetString(reader.GetOrdinal("Name"));
@@ -142,7 +142,7 @@ namespace SqlReadCustomer
                 bool isCorpAcct = reader.GetBoolean(reader.GetOrdinal("IsCorpAcct"));
                 int creditLimit = reader.GetInt32(reader.GetOrdinal("CreditLimit"));
                 bool active = reader.GetBoolean(reader.GetOrdinal("Active"));
-
+            
                 Customer customer = new Customer();
                 customer.Id = id;
                 customer.Name = name;
