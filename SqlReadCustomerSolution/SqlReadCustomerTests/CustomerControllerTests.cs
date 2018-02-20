@@ -21,8 +21,7 @@ namespace SqlReadCustomer.Tests
         public void InsertTest()
         {
             Assert.Fail();
-        }
-
+        } 
         [TestMethod()]
         public void SearchByNameTest()
         {

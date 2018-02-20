@@ -8,7 +8,7 @@ using SqlReadCustomer;
 namespace TestSqlReadCustomer
 {
     class Program
-    {
+    { 
         static void Main(string[] args)
         {
 
