@@ -11,28 +11,31 @@ namespace TestSqlReadCustomer
     {
         static void Main(string[] args)
         {
-              
+
             CustomerController cust = new CustomerController();
 
             Customer c = new Customer();
-            c.Name = "SuperDuperMax";
+
+            c.Id = 9;
+            c.Name = "SuperMaxXXX";
             c.City = "Mason";
             c.State = "OH";
             c.IsCorpAcct = true;
             c.CreditLimit = 1000000;
             c.Active = true;
 
-            if (!cust.Insert(c)) 
+            if (!cust.Update(c))
             {
-                Console.WriteLine("Insert Failed!");
+                Console.WriteLine("update failed!");
             }
+
             List<Customer> customers = cust.List();
-            //List<Customer> customers = cust.SearchByCreditLimitRange(300000, 1000000);
             foreach (Customer customer in customers)
             {
-                Console.WriteLine($"| {customer.City} | {customer.State}| {customer.CreditLimit}");
+                Console.WriteLine($"{customer.Id} | {customer.Name} "
+                    + $"| {customer.City} | {customer.State} | {customer.CreditLimit}");
             }
-            
+
             Console.ReadKey();
         }
     }

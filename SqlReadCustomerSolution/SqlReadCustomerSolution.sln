@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SqlReadCustomer", "SqlReadC
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestSqlReadCustomer", "customer\TestSqlReadCustomer.csproj", "{2F470206-AD5F-4D2D-BED2-B95111A32A96}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SqlReadCustomerTests", "SqlReadCustomerTests\SqlReadCustomerTests.csproj", "{6FF95996-DB4E-49DA-9E57-F992360945A5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{2F470206-AD5F-4D2D-BED2-B95111A32A96}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2F470206-AD5F-4D2D-BED2-B95111A32A96}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2F470206-AD5F-4D2D-BED2-B95111A32A96}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6FF95996-DB4E-49DA-9E57-F992360945A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6FF95996-DB4E-49DA-9E57-F992360945A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6FF95996-DB4E-49DA-9E57-F992360945A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6FF95996-DB4E-49DA-9E57-F992360945A5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
