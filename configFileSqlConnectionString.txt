@@ -1,0 +1,7 @@
+in .config file this is needed to connect to a diffferent sql server 
+
+<connectionStrings>
+    <add name ="ConnectionStringName" 
+         connectionString="Server=xxx;Database=xxx;Trusted_connection=true"
+         />
+  </connectionStrings>

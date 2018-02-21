@@ -7,12 +7,13 @@ using System.Threading.Tasks;
 
 namespace EFTutorial
 {
-    public class IntroDbContext: DbContext
+    public class IntroDbContext : DbContext
     {
-        public IntroDbContext() : base()
+        public IntroDbContext() : base(/*"name=ConnectionStringName"*/)//.config ConnectionStrings edit here
         {
 
         }
-        public virtual DbSet<Customer>Customers { get; set; }
+        public virtual DbSet<Customer> Customers { get; set; }
+        public virtual DbSet<Order>Orders {get;set;}
     }
 }

@@ -59,7 +59,12 @@
     <Compile Include="Migrations\201802211725388_Added City and State.Designer.cs">
       <DependentUpon>201802211725388_Added City and State.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201802212027297_Added Order.cs" />
+    <Compile Include="Migrations\201802212027297_Added Order.Designer.cs">
+      <DependentUpon>201802212027297_Added Order.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Order.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -73,6 +78,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201802211725388_Added City and State.resx">
       <DependentUpon>201802211725388_Added City and State.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802212027297_Added Order.resx">
+      <DependentUpon>201802212027297_Added Order.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
