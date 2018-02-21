@@ -10,7 +10,15 @@ namespace EFTutorial
     {
         static void Main(string[] args)
         {
-
+            IntroDbContext db = new IntroDbContext();
+            Customer[] customers = db.Customers.ToArray();
+            foreach (Customer cust  in customers)
+            {
+                string message = $"Id={cust.Id}, Name ={cust.Name}";
+                Console.WriteLine(message);
+            }
+            Console.ReadKey();
         }
+        
     }
 }
