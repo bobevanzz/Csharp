@@ -22,7 +22,7 @@ namespace SqlReadCustomer {
 				+ " IsCorpAcct = @IsCorpAcct, CreditLimit = @CreditLimit, Active = @Active "
 				+ " where id = @id;";
 
-			SqlCommand cmd = new SqlCommand(sql, conn);
+			SqlCommand cmd = new SqlCommand(sql, conn); 
 
 			cmd.Parameters.Add(new SqlParameter("@Id", customer.Id));
 			cmd.Parameters.Add(new SqlParameter("@Name", customer.Name));
@@ -39,7 +39,6 @@ namespace SqlReadCustomer {
 			}
 			return true;
 		}
-
 
 		public bool Insert(Customer customer) {
             string connStr = @"server=DESKTOP-V1OGCBJ\SQLSERVER;database=SqlTutorial;Trusted_connection=true";

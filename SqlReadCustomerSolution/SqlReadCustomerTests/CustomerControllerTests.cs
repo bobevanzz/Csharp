@@ -14,7 +14,7 @@ namespace SqlReadCustomer.Tests
         [TestMethod()]
         public void UpdateTest()
         {
-            Assert.Fail();
+            Assert.Fail(); 
         }
 
         [TestMethod()]
