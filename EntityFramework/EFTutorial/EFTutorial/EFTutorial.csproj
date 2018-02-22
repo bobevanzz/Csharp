@@ -59,9 +59,9 @@
     <Compile Include="Migrations\201802211725388_Added City and State.Designer.cs">
       <DependentUpon>201802211725388_Added City and State.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201802212027297_Added Order.cs" />
-    <Compile Include="Migrations\201802212027297_Added Order.Designer.cs">
-      <DependentUpon>201802212027297_Added Order.cs</DependentUpon>
+    <Compile Include="Migrations\201802221610584_Added required min-max length to Order and Customer.cs" />
+    <Compile Include="Migrations\201802221610584_Added required min-max length to Order and Customer.Designer.cs">
+      <DependentUpon>201802221610584_Added required min-max length to Order and Customer.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Order.cs" />
@@ -79,8 +79,8 @@
     <EmbeddedResource Include="Migrations\201802211725388_Added City and State.resx">
       <DependentUpon>201802211725388_Added City and State.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201802212027297_Added Order.resx">
-      <DependentUpon>201802212027297_Added Order.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201802221610584_Added required min-max length to Order and Customer.resx">
+      <DependentUpon>201802221610584_Added required min-max length to Order and Customer.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

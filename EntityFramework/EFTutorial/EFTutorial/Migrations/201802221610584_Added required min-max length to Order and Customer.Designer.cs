@@ -7,13 +7,13 @@ namespace EFTutorial.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.2.0-61023")]
-    public sealed partial class AddedOrder : IMigrationMetadata
+    public sealed partial class AddedrequiredminmaxlengthtoOrderandCustomer : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(AddedOrder));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(AddedrequiredminmaxlengthtoOrderandCustomer));
         
         string IMigrationMetadata.Id
         {
-            get { return "201802212027297_Added Order"; }
+            get { return "201802221610584_Added required min-max length to Order and Customer"; }
         }
         
         string IMigrationMetadata.Source
