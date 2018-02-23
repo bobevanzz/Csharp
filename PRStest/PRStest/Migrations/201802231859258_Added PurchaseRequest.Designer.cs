@@ -7,13 +7,13 @@ namespace PRStest.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.2.0-61023")]
-    public sealed partial class Initialization : IMigrationMetadata
+    public sealed partial class AddedPurchaseRequest : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(Initialization));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(AddedPurchaseRequest));
         
         string IMigrationMetadata.Id
         {
-            get { return "201802230313014_Initialization"; }
+            get { return "201802231859258_Added PurchaseRequest"; }
         }
         
         string IMigrationMetadata.Source

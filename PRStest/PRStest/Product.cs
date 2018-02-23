@@ -7,7 +7,6 @@ namespace PRStest
     {
         public int ID { get; set; }
         public virtual Vendor VendorId { get; set; }
-        public virtual Vendor vendor { get; set; }
         [StringLength(50)]
         [Required]
         public string PartNumber { get; set; }
@@ -23,9 +22,7 @@ namespace PRStest
         public string PhotoPath { get; set; }
         [Required]
         public bool Active { get; set; }
-        [Required]
-        public DateTime DateCreated { get; set; }
-        [Required]
-        public DateTime DateUpdated { get; set; }
+        public DateTime? DateCreated { get; set; }
+        public DateTime? DateUpdated { get; set; }
     }
 }

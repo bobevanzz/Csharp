@@ -17,22 +17,20 @@ namespace PRStest
         [StringLength(255)]
         [Required]
         public string Justification { get; set; }
-        public DateTime DateNeeded { get; set; }
+        public DateTime? DateNeeded { get; set; }
         [StringLength(25)]
         [Required]
         public string DeliveryMode { get; set; }
-        public int StatusId { get; set; }
+        public int? StatusId { get; set; }
         [Required]
         public decimal Total { get; set; }
-        public DateTime SubmittedDate { get; set; }
+        public DateTime? SubmittedDate { get; set; }
         [Required]
         public bool Active { get; set; }
         [StringLength(100)]
         public string ReasonForRejection { get; set; }
-
-        public DateTime DateCreated { get; set; }
-
-        public DateTime DateUpdated { get; set; }
+        public DateTime? DateCreated { get; set; }
+        public DateTime? DateUpdated { get; set; }
 
     }
 }

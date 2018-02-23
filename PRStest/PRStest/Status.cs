@@ -15,11 +15,8 @@ namespace PRStest
         public string Description { get; set; }
         [Required]
         public bool Active { get; set; }
-        [Required]
-        public DateTime DateCreated { get; set; }
-        [Required]
-        public DateTime DateUpdated { get; set; }
-        [Required]
-        public int UpdatedByUser { get; set; }
+        public DateTime? DateCreated { get; set; }
+        public DateTime? DateUpdated { get; set; }
+        public int? UpdatedByUser { get; set; }
     }
 }

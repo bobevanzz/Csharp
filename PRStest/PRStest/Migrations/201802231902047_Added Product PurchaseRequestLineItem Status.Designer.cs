@@ -7,13 +7,13 @@ namespace PRStest.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.2.0-61023")]
-    public sealed partial class AddedStatus : IMigrationMetadata
+    public sealed partial class AddedProductPurchaseRequestLineItemStatus : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(AddedStatus));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(AddedProductPurchaseRequestLineItemStatus));
         
         string IMigrationMetadata.Id
         {
-            get { return "201802230427507_Added Status"; }
+            get { return "201802231902047_Added Product PurchaseRequestLineItem Status"; }
         }
         
         string IMigrationMetadata.Source

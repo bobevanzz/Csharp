@@ -38,11 +38,9 @@ namespace PRStest
         public bool IsAdmin { get; set; }
         [Required]
         public bool Active { get; set; }
-        [Required]
-        public DateTime DateCreated { get; set; }
-        [Required]
-        public DateTime DateUpdated { get; set; }
+        public DateTime? DateCreated { get; set; }
+        public DateTime? DateUpdated { get; set; }
 
     }
-    }
+}
 
