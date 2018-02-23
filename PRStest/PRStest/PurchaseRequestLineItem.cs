@@ -11,9 +11,9 @@ namespace PRStest
     {
         public int Id { get; set; }
         public int PurchaseRequestId { get; set; }
-        public virtual PurchaseRequest PurchaseRequest { get; set; }
+        //public virtual PurchaseRequest PurchaseRequest { get; set; }
         public int ProductId { get; set; }
-        public virtual Product Product { get; set; }
+        //public virtual Product Product { get; set; }
         public int Quantity { get; set; }
        [Required]
         public bool Active { get; set; }
