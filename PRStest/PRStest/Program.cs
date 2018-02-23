@@ -12,6 +12,16 @@ namespace PRStest
         {
             
             IntroDbContext db = new IntroDbContext();
+            User[] users = db.Users.ToArray();
+            foreach (User user in users)
+            {
+                string message = $"Name={user.FirstName} {user.LastName}";
+                Console.WriteLine(message);
+            }
+            Console.ReadKey();
+            //                        .Where(Customer=>Customer.State=="OH")
+            //                        .OrderByDescending(cust => cust.State)
+            //                        .ToArray();
         }
     }
 }
