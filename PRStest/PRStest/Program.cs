@@ -12,12 +12,18 @@ namespace PRStest
         {
             
             IntroDbContext db = new IntroDbContext();
-            User[] users = db.Users.ToArray();
-            foreach (User user in users)
+            Vendor[] vendors = db.Vendors.ToArray();
+            foreach (Vendor vendor in vendors)
             {
-                string message = $"Name={user.FirstName} {user.LastName}";
+                string message = $"Name={vendor.Name}";
                 Console.WriteLine(message);
             }
+            //User[] users = db.Users.ToArray();
+            //foreach (User user in users)
+            //{
+            //    string message = $"Name={user.FirstName} {user.LastName}";
+            //    Console.WriteLine(message);
+            //}
             Console.ReadKey();
             //                        .Where(Customer=>Customer.State=="OH")
             //                        .OrderByDescending(cust => cust.State)

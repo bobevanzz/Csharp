@@ -63,6 +63,10 @@
     <Compile Include="Migrations\201802231902047_Added Product PurchaseRequestLineItem Status.Designer.cs">
       <DependentUpon>201802231902047_Added Product PurchaseRequestLineItem Status.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201802231928402_Added data to Product PurchaseRequestLineItem Status.cs" />
+    <Compile Include="Migrations\201802231928402_Added data to Product PurchaseRequestLineItem Status.Designer.cs">
+      <DependentUpon>201802231928402_Added data to Product PurchaseRequestLineItem Status.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Product.cs" />
     <Compile Include="Program.cs" />
@@ -86,6 +90,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201802231902047_Added Product PurchaseRequestLineItem Status.resx">
       <DependentUpon>201802231902047_Added Product PurchaseRequestLineItem Status.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802231928402_Added data to Product PurchaseRequestLineItem Status.resx">
+      <DependentUpon>201802231928402_Added data to Product PurchaseRequestLineItem Status.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
