@@ -55,10 +55,23 @@
     <Compile Include="Migrations\201802230313014_Initialization.Designer.cs">
       <DependentUpon>201802230313014_Initialization.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201802230347244_Added Vendor.cs" />
+    <Compile Include="Migrations\201802230347244_Added Vendor.Designer.cs">
+      <DependentUpon>201802230347244_Added Vendor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201802230418455_Added Product PurchaseRequest and PurchaseRequestLineItem.cs" />
+    <Compile Include="Migrations\201802230418455_Added Product PurchaseRequest and PurchaseRequestLineItem.Designer.cs">
+      <DependentUpon>201802230418455_Added Product PurchaseRequest and PurchaseRequestLineItem.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Product.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PurchaseRequest.cs" />
+    <Compile Include="PurchaseRequestLineItem.cs" />
+    <Compile Include="Status.cs" />
     <Compile Include="User.cs" />
+    <Compile Include="Vendor.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -67,6 +80,12 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201802230313014_Initialization.resx">
       <DependentUpon>201802230313014_Initialization.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802230347244_Added Vendor.resx">
+      <DependentUpon>201802230347244_Added Vendor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802230418455_Added Product PurchaseRequest and PurchaseRequestLineItem.resx">
+      <DependentUpon>201802230418455_Added Product PurchaseRequest and PurchaseRequestLineItem.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

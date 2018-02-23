@@ -8,41 +8,41 @@ using System.Threading.Tasks;
 
 namespace PRStest
 {
-
-    public class User
+    public class Vendor
     {
-        public int id { get; set; }
+        public int Id { get; set; }
         [Index(IsUnique = true)]
-        [StringLength(20)] //always required for strings
-        [Required] //always required for bool
-
-        public string UserName { get; set; }
         [StringLength(10)]
         [Required]
-        public string Password { get; set; }
-        [StringLength(20)]
+        public string Code { get; set; }
+        [StringLength(255)]
         [Required]
-        public string FirstName { get; set; }
-        [StringLength(20)]
+        public string Name { get; set; }
+        [StringLength(255)]
         [Required]
-        public string LastName { get; set; }
+        public string Address { get; set; }
+        [StringLength(255)]
+        [Required]
+        public string City { get; set; }
+        [StringLength(2)]
+        [Required]
+        public string State { get; set; }
+        [StringLength(5)]
+        [Required]
+        public string Zip { get; set; }
         [StringLength(12)]
         [Required]
         public string Phone { get; set; }
-        [StringLength(75)]
+        [StringLength(100)]
         [Required]
         public string Email { get; set; }
         [Required]
-        public bool IsReviewer { get; set; }
-        [Required]
-        public bool IsAdmin { get; set; }
+        public bool IsPreApproved { get; set; }
         [Required]
         public bool Active { get; set; }
         [Required]
         public DateTime DateCreated { get; set; }
         [Required]
         public DateTime DateUpdated { get; set; }
-
     }
-    }
-
+}
