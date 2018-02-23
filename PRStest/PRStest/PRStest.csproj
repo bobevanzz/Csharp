@@ -63,6 +63,14 @@
     <Compile Include="Migrations\201802230418455_Added Product PurchaseRequest and PurchaseRequestLineItem.Designer.cs">
       <DependentUpon>201802230418455_Added Product PurchaseRequest and PurchaseRequestLineItem.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201802230427507_Added Status.cs" />
+    <Compile Include="Migrations\201802230427507_Added Status.Designer.cs">
+      <DependentUpon>201802230427507_Added Status.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201802230430475_Actually Added Status this time.cs" />
+    <Compile Include="Migrations\201802230430475_Actually Added Status this time.Designer.cs">
+      <DependentUpon>201802230430475_Actually Added Status this time.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Product.cs" />
     <Compile Include="Program.cs" />
@@ -86,6 +94,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201802230418455_Added Product PurchaseRequest and PurchaseRequestLineItem.resx">
       <DependentUpon>201802230418455_Added Product PurchaseRequest and PurchaseRequestLineItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802230427507_Added Status.resx">
+      <DependentUpon>201802230427507_Added Status.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802230430475_Actually Added Status this time.resx">
+      <DependentUpon>201802230430475_Actually Added Status this time.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

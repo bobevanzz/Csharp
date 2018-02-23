@@ -18,6 +18,7 @@ namespace PRStest
         public virtual DbSet<PurchaseRequest> PurchaseRequests { get; set; }
         public virtual DbSet<PurchaseRequestLineItem> PurchaseRequestLineItems { get; set; }
         public virtual DbSet<Product> Products { get; set; }
+        public virtual DbSet<Status> Statuses { get; set; }
 
     }
 }

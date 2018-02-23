@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace PRStest
 {
-    class Status
+    public class Status
     {   [Required]
         public int Id { get; set; }
         [MaxLength(20)]
