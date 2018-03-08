@@ -9,67 +9,65 @@ using System.Web.Mvc;
 
 namespace EmployeeWebApiProject.Controllers
 {
-    public class EmployeesController : Controller
+    public class DepartmentsController : Controller
     {
         private AppDbContext db = new AppDbContext();
-        
-        // Employees/ActiveEmployees
-        public ActionResult ActiveEmployees()
+
+        // GET: Departments
+        public ActionResult Index()
         {
-            List<Employee> employees = db.Employees.Where(e => e.Active).ToList();
-            return Json(employees, JsonRequestBehavior.AllowGet);
+            return View();
         }
-        // Employees/List
-            public ActionResult List()
+        // Departments/List
+        public ActionResult List()
         {
-            return Json(db.Employees.ToList(), JsonRequestBehavior.AllowGet);
+            return Json(db.Departments.ToList(), JsonRequestBehavior.AllowGet);
         }
-        // Employees/Get/1
+        // Departments/Get/1
         public ActionResult Get(int? id)
         {
             if (id == null)
             {
                 return Json(new JsonMessage("Failure", "Id is null"), JsonRequestBehavior.AllowGet);
             }
-            Employee employee = db.Employees.Find(id);
-            if (employee==null)
+            Department department = db.Departments.Find(id);
+            if (department == null)
             {
                 return Json(new JsonMessage("Failure", "Id is not found"), JsonRequestBehavior.AllowGet);
             }
-            return Json(employee, JsonRequestBehavior.AllowGet);
+            return Json(department, JsonRequestBehavior.AllowGet);
         }
-
-        // /Employees/Create/ [POST]
-        public ActionResult Create ([FromBody] Employee employee)
+        // /Departments/Create/ [POST]
+        public ActionResult Create([FromBody] Department department)
         {
             if (!ModelState.IsValid)
             {
                 return Json(new JsonMessage("Failure", "ModelState is not valid"), JsonRequestBehavior.AllowGet);
 
             }
-            db.Employees.Add(employee);
+            db.Departments.Add(department);
             try
             {
                 db.SaveChanges();
-            } catch (Exception ex)
+            }
+            catch (Exception ex)
             {
                 return Json(new JsonMessage("Failure", ex.Message), JsonRequestBehavior.AllowGet);
             }
-            return Json(new JsonMessage("Success", "Employee was created"));
+            return Json(new JsonMessage("Success", "Department was created"));
         }
-
-        // /Employees/Change [POST]
-        public ActionResult Change([FromBody] Employee employee)
+        // /Departments/Change [POST]
+        public ActionResult Change([FromBody] Department department)
         {
-            Employee employee2 = db.Employees.Find(employee.Id);
-            if (employee2==null)
+            Department department2 = db.Departments.Find(department.Id);
+            if (department2 == null)
             {
                 return Json(new JsonMessage("Failure", "Record to be changed has been deleted"));
 
             }
-            employee2.Name = employee.Name;
-            employee2.Salary = employee.Salary;
-            employee2.Active = employee.Active;
+            department2.Name = department.Name;
+            department2.EmployeeId = department.EmployeeId;
+            department2.Budget = department.Budget;
             try
             {
                 db.SaveChanges();
@@ -78,15 +76,15 @@ namespace EmployeeWebApiProject.Controllers
             {
                 return Json(new JsonMessage("Failure", ex.Message), JsonRequestBehavior.AllowGet);
             }
-            return Json(new JsonMessage("Success", "Employee was changed"));
+            return Json(new JsonMessage("Success", "Department was changed"));
         }
 
 
-        // /Employees/Remove [POST]
-        public ActionResult Remove([FromBody] Employee employee)
+        // /Departments/Remove [POST]
+        public ActionResult Remove([FromBody] Department department)
         {
-            Employee employee2 = db.Employees.Find(employee.Id);
-            db.Employees.Remove(employee2);
+            Department department2 = db.Departments.Find(department.Id);
+            db.Departments.Remove(department2);
             try
             {
                 db.SaveChanges();
@@ -95,7 +93,7 @@ namespace EmployeeWebApiProject.Controllers
             {
                 return Json(new JsonMessage("Failure", ex.Message), JsonRequestBehavior.AllowGet);
             }
-            return Json(new JsonMessage("Success", "Employee was removed"));
+            return Json(new JsonMessage("Success", "Department was removed"));
         }
     }
 }
