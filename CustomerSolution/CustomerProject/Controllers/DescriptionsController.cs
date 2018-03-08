@@ -10,124 +10,107 @@ using CustomerProject.Models;
 
 namespace CustomerProject.Controllers
 {
-    public class CustomersController : Controller
+    public class DescriptionsController : Controller
     {
         private CustomerDbContext db = new CustomerDbContext();
 
-        //GET: Customers/OrdersForCustomer/5
-        public ActionResult OrdersForCustomer (int? id)
-        {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            OrdersForCustomer ordersForCustomer = new OrdersForCustomer();
-            ordersForCustomer.Customer = db.Customers.Find(id);
-            if (ordersForCustomer.Customer == null)
-            {
-                return HttpNotFound();
-            }
-            ordersForCustomer.Orders= db.Orders.Where(o => o.CustomerId == id).ToList();
-            return View(ordersForCustomer);
-        }
-
-        // GET: Customers
+        // GET: Descriptions
         public ActionResult Index()
         {
-            return View(db.Customers.ToList());
+            return View(db.Descriptions.ToList());
         }
 
-        // GET: Customers/Details/5
+        // GET: Descriptions/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Customer customer = db.Customers.Find(id);
-            if (customer == null)
+            Description description = db.Descriptions.Find(id);
+            if (description == null)
             {
                 return HttpNotFound();
             }
-            return View(customer);
+            return View(description);
         }
 
-        // GET: Customers/Create
+        // GET: Descriptions/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: Customers/Create
+        // POST: Descriptions/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,Name,Sales,Active,DateCreated")] Customer customer)
+        public ActionResult Create([Bind(Include = "Id")] Description description)
         {
             if (ModelState.IsValid)
             {
-                db.Customers.Add(customer);
+                db.Descriptions.Add(description);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            return View(customer);
+            return View(description);
         }
 
-        // GET: Customers/Edit/5
+        // GET: Descriptions/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Customer customer = db.Customers.Find(id);
-            if (customer == null)
+            Description description = db.Descriptions.Find(id);
+            if (description == null)
             {
                 return HttpNotFound();
             }
-            return View(customer);
+            return View(description);
         }
 
-        // POST: Customers/Edit/5
+        // POST: Descriptions/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,Name,Sales,Active,DateCreated")] Customer customer)
+        public ActionResult Edit([Bind(Include = "Id")] Description description)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(customer).State = EntityState.Modified;
+                db.Entry(description).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View(customer);
+            return View(description);
         }
 
-        // GET: Customers/Delete/5
+        // GET: Descriptions/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Customer customer = db.Customers.Find(id);
-            if (customer == null)
+            Description description = db.Descriptions.Find(id);
+            if (description == null)
             {
                 return HttpNotFound();
             }
-            return View(customer);
+            return View(description);
         }
 
-        // POST: Customers/Delete/5
+        // POST: Descriptions/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Customer customer = db.Customers.Find(id);
-            db.Customers.Remove(customer);
+            Description description = db.Descriptions.Find(id);
+            db.Descriptions.Remove(description);
             db.SaveChanges();
             return RedirectToAction("Index");
         }
