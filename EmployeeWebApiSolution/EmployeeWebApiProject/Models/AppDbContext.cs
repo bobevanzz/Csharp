@@ -12,6 +12,6 @@ namespace EmployeeWebApiProject.Models
         public DbSet<Employee> Employees { get; set; }
         public DbSet<Department> Departments { get; set; }
         public DbSet<Customer> Customers { get; set; }
-    //    public DbSet<Order> Orders { get; set; }
+        public DbSet<Order> Orders { get; set; }
     }
 }
