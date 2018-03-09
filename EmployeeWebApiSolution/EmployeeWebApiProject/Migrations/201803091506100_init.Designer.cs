@@ -7,13 +7,13 @@ namespace EmployeeWebApiProject.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.2.0-61023")]
-    public sealed partial class Departmentscontroller : IMigrationMetadata
+    public sealed partial class init : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(Departmentscontroller));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(init));
         
         string IMigrationMetadata.Id
         {
-            get { return "201803081957357_Departments controller"; }
+            get { return "201803091506100_init"; }
         }
         
         string IMigrationMetadata.Source

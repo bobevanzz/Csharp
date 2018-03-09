@@ -6,13 +6,15 @@ using System.Web;
 
 namespace EmployeeWebApiProject.Models
 {
-    public class Department
+    public class Customer
     {
         public int Id { get; set; }
-        [StringLength(80)]
+        [StringLength(50)]
+        [Required]
         public string Name { get; set; }
-        public int EmployeeId { get; set; }
-        public decimal Budget { get; set; }
+        public decimal CreditLimit { get; set; }
+        [Required]
+        public bool Active { get; set; }
 
     }
 }

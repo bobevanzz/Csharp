@@ -11,5 +11,7 @@ namespace EmployeeWebApiProject.Models
         public AppDbContext() : base() { }
         public DbSet<Employee> Employees { get; set; }
         public DbSet<Department> Departments { get; set; }
+        public DbSet<Customer> Customers { get; set; }
+    //    public DbSet<Order> Orders { get; set; }
     }
 }
