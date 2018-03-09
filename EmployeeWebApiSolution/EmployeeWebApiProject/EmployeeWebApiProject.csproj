@@ -200,6 +200,10 @@
     <Compile Include="Migrations\201803091518195_added Order.Designer.cs">
       <DependentUpon>201803091518195_added Order.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201803091522451_added data.cs" />
+    <Compile Include="Migrations\201803091522451_added data.Designer.cs">
+      <DependentUpon>201803091522451_added data.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AppDbContext.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -287,6 +291,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201803091518195_added Order.resx">
       <DependentUpon>201803091518195_added Order.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803091522451_added data.resx">
+      <DependentUpon>201803091522451_added data.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
