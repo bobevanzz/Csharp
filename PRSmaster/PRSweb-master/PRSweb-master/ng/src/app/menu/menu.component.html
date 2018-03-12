@@ -1,0 +1,6 @@
+<div style= "background-color: blue; font-size: 25px; font-weight: bold;"> Purchase Request System</div>
+<nav>
+	<ul>
+		<li *ngFor= "let menu of menus"> <a routerLink="{{menu.href}}">{{menu.display}}</a></li>
+	</ul>
+</nav>

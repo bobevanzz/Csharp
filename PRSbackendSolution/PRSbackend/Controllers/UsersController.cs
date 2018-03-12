@@ -39,7 +39,9 @@ namespace PRSbackend.Controllers
         }
         // /Users/Create/ [POST]
         public ActionResult Create([FromBody] User user)
+
         {
+            user.DateCreated = DateTime.Now;
             if (!ModelState.IsValid)
             {
                 return Json(new JsonMessage("Failure", "ModelState is not valid"), JsonRequestBehavior.AllowGet);

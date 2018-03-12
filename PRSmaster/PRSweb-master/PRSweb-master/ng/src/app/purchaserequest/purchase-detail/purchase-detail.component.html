@@ -1,0 +1,30 @@
+<menu-comp></menu-comp>
+<div>
+
+	<div>
+		<span class="PageTitle">Purchase Request List</span>
+		<span class="CreateNew"><a routerLink="/purchaserequests/add">Add New</a></span>
+	</div>
+
+<div *ngIf="purchaserequest">
+
+	<table class="table">
+	
+		<tr><th> Description</th><td>{{purchaserequest.Description}}</td></tr>
+		<tr><th> Justification</th><td>{{purchaserequest.Justification}}</td></tr>
+		<tr><th> Date Needed</th><td>{{purchaserequest.DateNeeded  | date:'M/d/y'}}</td></tr>
+		<tr><th> Delivery Mode</th><td>{{purchaserequest.DeliveryMode}}</td></tr>
+		<tr><th> Status</th><td>{{purchaserequest.Status}}</td></tr>
+		
+		
+	</table>
+
+	<div class="text-center">
+		<button class="btn btn-danger" (click)="remove()">Delete</button>
+		<span *ngIf="purchaserequest.Status == 'NEW' || purchaserequest.Status == 'REJECTED'"></span><button class="btn btn-warning" (click)="review()">Review</button>
+		 
+	</div>
+</div>
+	
+</div>
+
