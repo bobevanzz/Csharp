@@ -27,20 +27,8 @@ namespace PRSbackend.Models
         public bool Active { get; set; }
         public string ReasonForRejection { get; set; }
         public DateTime DateCreated { get; set; }
+        // [ForeignKey("UserId")]
         public int UserId { get; set; }
-        public virtual User User { get; set; }
-
-        public void Clone(PurchaseRequest pr)
-        {
-            Description = pr.Description;
-            Justification = pr.Justification;
-            DeliveryMode = pr.DeliveryMode;
-            Status = pr.Status;
-            Total = pr.Total;
-            Active = pr.Active;
-            ReasonForRejection = pr.ReasonForRejection;
-            DateCreated = pr.DateCreated;
-            UserId = pr.UserId;
-        }
+        public virtual User user { get; set; }
     }
 }

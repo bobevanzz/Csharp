@@ -35,6 +35,6 @@ namespace PRSbackend.Models
         [Required]
         public bool IsAdmin { get; set; }
         public bool  Active { get; set; }
-        public DateTime DateCreated { get; set; }
+        public DateTime DateCreated { get; set; } = DateTime.Now;
     }
 }
