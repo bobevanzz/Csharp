@@ -7,13 +7,13 @@ namespace PRSbackend.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.2.0-61023")]
-    public sealed partial class addedtouser : IMigrationMetadata
+    public sealed partial class controllers : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(addedtouser));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(controllers));
         
         string IMigrationMetadata.Id
         {
-            get { return "201803092019135_added to user"; }
+            get { return "201803121531527_controllers"; }
         }
         
         string IMigrationMetadata.Source

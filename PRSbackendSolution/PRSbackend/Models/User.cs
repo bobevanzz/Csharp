@@ -11,9 +11,9 @@ namespace PRSbackend.Models
     {
         public int Id { get; set; }
 
-        [StringLength(30)] 
-        [Required] 
-        [Index(IsUnique = true)] 
+        [StringLength(30)]
+        [Required]
+        [Index(IsUnique = true)]
         public string UserName { get; set; }
         [StringLength(30)]
         [Required]
@@ -34,7 +34,7 @@ namespace PRSbackend.Models
         public bool IsReviewer { get; set; }
         [Required]
         public bool IsAdmin { get; set; }
-        public bool  Active { get; set; }
-        public DateTime DateCreated { get; set; } = DateTime.Now;
+        public bool Active { get; set; }
+        public DateTime DateCreated { get; set; }
     }
 }
