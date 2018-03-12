@@ -65,7 +65,6 @@ namespace PRSbackend.Controllers
                 return Json(new JsonMessage("Failure", "Record to be changed has been deleted"));
 
             }
-            product2.VendorId = product.VendorId ;   ///////////////////////////////////////
             product2.PartNumber = product.PartNumber; 
             product2.Name = product.Name ;
             product2.Price = product.Price ;

@@ -64,9 +64,7 @@ namespace PRSbackend.Controllers
             {
                 return Json(new JsonMessage("Failure", "Record to be changed has been deleted"));
 
-            }//////////////////////////////////////
-            purchaserequestlineitem2.PurchaseRequestId = purchaserequestlineitem.PurchaseRequestId ;
-            purchaserequestlineitem2.ProductId = purchaserequestlineitem.ProductId ;
+            }
             purchaserequestlineitem2.Quantity = purchaserequestlineitem.Quantity ;
             
             try
