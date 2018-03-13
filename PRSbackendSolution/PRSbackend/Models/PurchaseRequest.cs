@@ -30,5 +30,14 @@ namespace PRSbackend.Models
         // [ForeignKey("UserId")]
         public int UserId { get; set; }
         public virtual User user { get; set; }
+        public void Clone(PurchaseRequest pr)
+        {
+            Description = pr.Description;
+            Justification = pr.Justification;
+            DeliveryMode = pr.DeliveryMode;
+            Status = pr.Status;
+            Total = pr.Total;
+            UserId = pr.UserId;
+        }
     }
 }

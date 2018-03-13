@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -7,6 +8,7 @@ namespace PRSbackend.Models
 {
     public class PurchaseRequestLineItem
     {
+        [JsonIgnore]
         public int Id { get; set; }
         public int Quantity { get; set; }
         public int PurchaseRequestId { get; set; }
