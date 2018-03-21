@@ -197,6 +197,10 @@
     <Compile Include="Migrations\201803121531527_controllers.Designer.cs">
       <DependentUpon>201803121531527_controllers.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201803211622473_fixed backend.cs" />
+    <Compile Include="Migrations\201803211622473_fixed backend.Designer.cs">
+      <DependentUpon>201803211622473_fixed backend.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AppDbContext.cs" />
     <Compile Include="Models\Product.cs" />
@@ -285,6 +289,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201803121531527_controllers.resx">
       <DependentUpon>201803121531527_controllers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803211622473_fixed backend.resx">
+      <DependentUpon>201803211622473_fixed backend.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
